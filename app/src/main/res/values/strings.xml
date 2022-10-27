@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">RepositoryIntern</string>
+    <string name="account_fragment_name">ID: 123 456 789</string>
+    <string name="share">Share</string>
+    <string name="title_btn_choose">Choose</string>
+    <string name="title_btn_people">People</string>
+    <string name="title_btn_questionnaires">Questionnaires</string>
+    <string name="title_btn_wishes">Wishes</string>
+    <string name="title_about_me">About me</string>
+    <string name="title_dream_and_get">Dream and get</string>
+    <string name="title_moment">Moments</string>
+    <string name="title_chronicles">Chronicles</string>
 </resources>

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimarySurface"
+    tools:context=".AccountFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/app_bar_ac_fragment"
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimarySurface"
+            app:menu="@menu/app_bar_menu"
+            app:navigationIcon="@drawable/ic_menu_24"
+            app:title="@string/account_fragment_name"
+            app:titleTextColor="?attr/colorOnSurface" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar_container">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/container_avatar"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="100dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/shape_avatar_image"
+                app:srcCompat="@drawable/im_avatar">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="bottom"
+                android:backgroundTint="?attr/colorPrimarySurface"
+                android:foreground="@drawable/shape"
+                android:translationZ="8dp"
+                app:cardCornerRadius="80dp"
+                app:layout_constraintBottom_toBottomOf="@id/container_avatar"
+                app:layout_constraintStart_toStartOf="@id/container_avatar">
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/inter_regular"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="24sp"
+                    tools:text="4.7" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/name_acc_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:fontFamily="@font/inter_medium"
+                android:textAlignment="center"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_avatar"
+                tools:text="Alice Peterson" />
+
+            <ImageView
+                android:id="@+id/icon_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="language"
+                android:src="@drawable/ic_language_24"
+                app:layout_constraintEnd_toStartOf="@+id/text_language"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_acc_fragment" />
+
+            <TextView
+                android:id="@+id/text_language"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_dim24"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/inter_regular"
+                android:textAlignment="textStart"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btn_language"
+                app:layout_constraintStart_toEndOf="@id/icon_language"
+                app:layout_constraintTop_toBottomOf="@id/name_acc_fragment"
+                tools:text="Russian, English, German" />
+
+            <Button
+                android:id="@+id/btn_language"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:text="@string/title_btn_choose"
+                android:textAllCaps="false"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_language"
+                app:layout_constraintTop_toBottomOf="@id/name_acc_fragment" />
+
+            <ImageView
+                android:id="@+id/icon_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="18dp"
+                android:contentDescription="location"
+                android:src="@drawable/ic_location_24"
+                app:layout_constraintEnd_toStartOf="@+id/text_location"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/icon_language" />
+
+            <TextView
+                android:id="@+id/text_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_dim24"
+                android:fontFamily="@font/inter_regular"
+                android:textAlignment="textStart"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/btn_location"
+                app:layout_constraintStart_toEndOf="@id/icon_location"
+                app:layout_constraintTop_toBottomOf="@id/text_language"
+                tools:text="New York city, USA" />
+
+            <Button
+                android:id="@+id/btn_location"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="-2dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:text="@string/title_btn_choose"
+                android:textAllCaps="false"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_location"
+                app:layout_constraintTop_toBottomOf="@id/btn_language" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_image_main_acc_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim20"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_location"
+                tools:itemCount="4"
+                tools:listitem="@layout/layout_item_image_main" />
+
+            <Button
+                android:id="@+id/btn_questionnaires"
+                style="@style/styleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim24"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title_btn_questionnaires"
+                android:textAppearance="?attr/textAppearanceButton"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toStartOf="@+id/btn_people"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+
+            <Button
+                android:id="@+id/btn_people"
+                style="@style/styleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/margin_dim24"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title_btn_people"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btn_questionnaires"
+                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/container_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim16"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:enabled="true"
+                android:hint="@string/title_about_me"
+                android:orientation="horizontal"
+                app:boxBackgroundColor="?attr/colorPrimarySurface"
+                app:counterEnabled="true"
+                app:counterMaxLength="300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_questionnaires">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_text_about_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    android:textAlignment="textStart"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="16sp"
+                    tools:text="Жизнь будет гораздо проще и приятнее для каждого человека, если мы будем" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_dream_and_get"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim20"
+                android:textSize="@dimen/text_size_dim16"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/title_dream_and_get"
+                android:textColor="?attr/colorOnSurface"
+                app:layout_constraintEnd_toStartOf="@+id/switch_dream"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/container_edit_text" />
+
+            <Switch
+                android:id="@+id/switch_dream"
+                style="@style/style_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:checked="false"
+                android:enabled="true"
+                android:minWidth="?attr/minTouchTargetSize"
+                android:minHeight="?attr/minTouchTargetSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_dream_and_get"
+                app:layout_constraintTop_toBottomOf="@+id/container_edit_text"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <Button
+                android:id="@+id/btn_wishes"
+                style="@style/styleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:textSize="@dimen/text_size_dim16"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title_btn_wishes"
+                android:textColor="?attr/colorOnSurface"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_dream_and_get" />
+
+            <TextView
+                android:id="@+id/text_moment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim18"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title_moment"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="@dimen/text_size_dim14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_wishes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_moments"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintDimensionRatio="3:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_moment"
+                tools:listitem="@layout/item_moment"
+                tools:itemCount="9"/>
+
+            <TextView
+                android:id="@+id/text_chronicles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="@dimen/margin_dim18"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                android:textSize="@dimen/text_size_dim14"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/title_chronicles"
+                android:textColor="?attr/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/list_moments" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_chronicles"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/margin_dim16"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/margin_dim16"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_chronicles"
+                app:spanCount="3"
+                tools:itemCount="9"
+                tools:listitem="@layout/item_chronicles" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

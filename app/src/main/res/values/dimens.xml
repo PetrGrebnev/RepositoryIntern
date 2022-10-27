@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin size -->
+    <dimen name="margin_dim16">16dp</dimen>
+    <dimen name="margin_dim18">18dp</dimen>
+    <dimen name="margin_dim20">20dp</dimen>
+    <dimen name="margin_dim24">24dp</dimen>
+
+    <!-- Text size -->
+    <dimen name="text_size_dim18">18sp</dimen>
+    <dimen name="text_size_dim14">14sp</dimen>
+    <dimen name="text_size_dim16">16sp</dimen>
+
+</resources>
