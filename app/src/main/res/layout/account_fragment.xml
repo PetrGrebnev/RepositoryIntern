@@ -178,7 +178,7 @@
                 app:layout_constraintTop_toBottomOf="@id/btn_language" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_image_main_acc_fragment"
+                android:id="@+id/list_image_profile"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_dim16"
@@ -209,7 +209,7 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toStartOf="@+id/btn_people"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+                app:layout_constraintTop_toBottomOf="@+id/list_image_profile" />
 
             <Button
                 android:id="@+id/btn_people"
@@ -225,7 +225,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btn_questionnaires"
-                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+                app:layout_constraintTop_toBottomOf="@+id/list_image_profile" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/container_edit_text"
