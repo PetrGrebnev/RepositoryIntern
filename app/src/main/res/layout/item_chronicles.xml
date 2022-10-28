@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/image_profile"
+        android:id="@+id/image_chronicles"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="2.5dp"

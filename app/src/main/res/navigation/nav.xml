@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.example.repositoryintern.AccountFragment"
+        android:name="com.example.repositoryintern.ui.AccountFragment"
         android:label="account_fragment"
         tools:layout="@layout/account_fragment" />
 </navigation>

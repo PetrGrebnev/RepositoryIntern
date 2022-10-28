@@ -37,9 +37,13 @@ android {
 dependencies {
 
     def navigateVersion = '2.5.3'
+    def glideVersion = '4.13.2'
 
     implementation "androidx.navigation:navigation-fragment-ktx:$navigateVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navigateVersion"
+
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
