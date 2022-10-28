@@ -231,7 +231,6 @@
                 android:id="@+id/container_edit_text"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-
                 android:layout_marginStart="@dimen/margin_dim16"
                 android:layout_marginTop="@dimen/margin_dim16"
                 android:layout_marginEnd="@dimen/margin_dim16"
@@ -359,7 +358,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="@dimen/margin_dim16"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:layout_constraintDimensionRatio="1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_chronicles"
