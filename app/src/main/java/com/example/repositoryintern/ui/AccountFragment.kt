@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.repositoryintern.R
 import com.example.repositoryintern.databinding.AccountFragmentBinding
 import com.example.repositoryintern.ui.adapter.ImagerRecyclerViewAdapter
 import com.example.repositoryintern.ui.adapter.viewholders.ImageRecyclerViewItem
@@ -58,6 +59,12 @@ class AccountFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding?.apply {
+            score.text = "4.3"
+            nameAccFragment.text = getText(R.string.title_acc_name)
+            titleLanguage.text = getText(R.string.title_language)
+            titleLocation.text = getText(R.string.title_location)
+        }
         adapterCreate()
     }
 
@@ -74,9 +81,9 @@ class AccountFragment: Fragment() {
     }
 
     private fun observe() {
-        adapterProfile.items = listProfile
-        adapterMoment.items = listMoment
-        adapterChronicles.items = listChronicles
+        adapterProfile.submitList(listProfile)
+        adapterMoment.submitList(listMoment)
+        adapterChronicles.submitList(listChronicles)
     }
 
     override fun onDestroy() {

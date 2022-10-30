@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">RepositoryIntern</string>
-    <string name="account_fragment_name">ID: 123 456 789</string>
+    <string name="account_fragment_id">ID: 123 456 789</string>
     <string name="share">Share</string>
+    <string name="title_acc_name">Alice Peterson</string>
+    <string name="title_language">Каким язык влыдеете?</string>
+    <string name="title_location">Где вы находитесь?</string>
     <string name="title_btn_choose">Choose</string>
     <string name="title_btn_people">People</string>
     <string name="title_btn_questionnaires">Questionnaires</string>

@@ -20,7 +20,7 @@
     </style>
 
     <style name="shape_profile_image" parent="">
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">4dp</item>
     </style>
 
     <style name="styleButton" parent="">

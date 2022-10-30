@@ -2,15 +2,15 @@ package com.example.repositoryintern.ui.adapter.viewholders
 
 sealed class ImageRecyclerViewItem {
 
-    class ImageProfile(
+    data class ImageProfile(
         val image: String
     ) : ImageRecyclerViewItem()
 
-    class ImageMoment(
+    data class ImageMoment(
         val image: String
     ) : ImageRecyclerViewItem()
 
-    class ImageChronicles(
+    data class ImageChronicles(
         val image: String
     ) : ImageRecyclerViewItem()
 }
