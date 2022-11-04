@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimarySurface"
-    tools:context=".ui.AccountFragment">
+    tools:context=".ui.account.AccountFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_container"
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimarySurface"
-            app:menu="@menu/app_bar_menu"
+            app:menu="@menu/menu_acc_fragment"
             app:navigationIcon="@drawable/ic_menu_24"
             app:title="@string/account_fragment_id"
             app:titleTextColor="?attr/colorOnSurface" />
@@ -49,7 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/shape_avatar_image"
+                app:shapeAppearanceOverlay="@style/shape_avatar_profile"
                 app:srcCompat="@drawable/im_avatar">
 
             </com.google.android.material.imageview.ShapeableImageView>
