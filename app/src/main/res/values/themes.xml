@@ -1,26 +1,39 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools">я
     <!-- Base application theme. -->
-    <style name="Theme.RepositoryIntern" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.RepositoryIntern" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorOnPrimary">@color/black_100</item>
+        <item name="colorPrimaryVariant">@color/black_surface</item>
+        <item name="colorOnPrimary">@color/white_87</item>
         <!--Surface -->
         <item name="colorPrimarySurface">@color/black_surface</item>
+        <item name="colorSurface">@color/grey_17</item>
         <item name="colorOnSurface">@color/white_87</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" >?attr/colorOnPrimary</item>
+        <item name="android:statusBarColor">?attr/colorOnError</item>
+        <item name="appBarLayoutStyle">?attr/colorSurface</item>
         <!-- Error. -->
         <item name="colorError">@color/red</item>
         <item name="colorOnError">@color/black_100</item>
     </style>
 
-    <style name="shape_avatar_image" parent="">
+    <style name="shape_avatar_profile" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">80dp</item>
     </style>
 
+    <style name="shape_avatar_people" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="shape_profile_image" parent="">
-        <item name="cornerSize">10%</item>
+        <item name="cornerSize">4dp</item>
+    </style>
+
+    <style name="appBar_people">
+        <item name="background">@color/grey_17</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
     </style>
 
     <style name="styleButton" parent="">
@@ -28,7 +41,7 @@
         <item name="strokeWidth">1dp</item>
         <item name="strokeColor">?attr/colorPrimary</item>
     </style>
-    
+
     <style name="style_switch" parent="Widget.AppCompat.CompoundButton.Switch">
         <item name="colorSwitchThumbNormal">@color/grey_99</item>
         <item name="android:thumbTint">@color/switch_color</item>

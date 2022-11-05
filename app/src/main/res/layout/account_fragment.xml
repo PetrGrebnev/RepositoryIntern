@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimarySurface"
-    tools:context=".ui.AccountFragment">
+    tools:context=".ui.account.AccountFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_container"
@@ -18,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimarySurface"
-            app:menu="@menu/app_bar_menu"
+            app:menu="@menu/menu_acc_fragment"
             app:navigationIcon="@drawable/ic_menu_24"
-            app:title="@string/account_fragment_name"
+            app:title="@string/account_fragment_id"
             app:titleTextColor="?attr/colorOnSurface" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -48,7 +49,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/shape_avatar_image"
+                app:shapeAppearanceOverlay="@style/shape_avatar_profile"
                 app:srcCompat="@drawable/im_avatar">
 
             </com.google.android.material.imageview.ShapeableImageView>
@@ -90,7 +91,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/container_avatar"
-                tools:text="Alice Peterson" />
+                tools:text="@string/title_acc_name" />
 
             <ImageView
                 android:id="@+id/icon_language"
@@ -101,12 +102,12 @@
                 android:layout_marginEnd="18dp"
                 android:contentDescription="language"
                 android:src="@drawable/ic_language_24"
-                app:layout_constraintEnd_toStartOf="@+id/text_language"
+                app:layout_constraintEnd_toStartOf="@+id/title_language"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/name_acc_fragment" />
 
             <TextView
-                android:id="@+id/text_language"
+                android:id="@+id/title_language"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_dim24"
@@ -132,7 +133,7 @@
                 android:textAllCaps="false"
                 android:textColor="?attr/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/text_language"
+                app:layout_constraintStart_toEndOf="@id/title_language"
                 app:layout_constraintTop_toBottomOf="@id/name_acc_fragment" />
 
             <ImageView
@@ -144,12 +145,12 @@
                 android:layout_marginEnd="18dp"
                 android:contentDescription="location"
                 android:src="@drawable/ic_location_24"
-                app:layout_constraintEnd_toStartOf="@+id/text_location"
+                app:layout_constraintEnd_toStartOf="@+id/title_location"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/icon_language" />
 
             <TextView
-                android:id="@+id/text_location"
+                android:id="@+id/title_location"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_dim24"
@@ -159,7 +160,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toStartOf="@id/btn_location"
                 app:layout_constraintStart_toEndOf="@id/icon_location"
-                app:layout_constraintTop_toBottomOf="@id/text_language"
+                app:layout_constraintTop_toBottomOf="@id/title_language"
                 tools:text="New York city, USA" />
 
             <Button
@@ -174,11 +175,11 @@
                 android:textAllCaps="false"
                 android:textColor="?attr/colorPrimary"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/text_location"
+                app:layout_constraintStart_toEndOf="@id/title_location"
                 app:layout_constraintTop_toBottomOf="@id/btn_language" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list_image_main_acc_fragment"
+                android:id="@+id/list_image_profile"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/margin_dim16"
@@ -189,7 +190,7 @@
                 app:layout_constraintDimensionRatio="3:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_location"
+                app:layout_constraintTop_toBottomOf="@id/title_location"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_image_profile" />
 
@@ -209,7 +210,7 @@
                 android:textStyle="normal"
                 app:layout_constraintEnd_toStartOf="@+id/btn_people"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+                app:layout_constraintTop_toBottomOf="@+id/list_image_profile" />
 
             <Button
                 android:id="@+id/btn_people"
@@ -225,7 +226,7 @@
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/btn_questionnaires"
-                app:layout_constraintTop_toBottomOf="@+id/list_image_main_acc_fragment" />
+                app:layout_constraintTop_toBottomOf="@+id/list_image_profile" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/container_edit_text"
@@ -279,7 +280,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="@dimen/margin_dim16"
-                android:checked="false"
+                android:checked="true"
                 android:enabled="true"
                 android:minWidth="?attr/minTouchTargetSize"
                 android:minHeight="?attr/minTouchTargetSize"

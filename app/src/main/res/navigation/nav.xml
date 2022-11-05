@@ -7,7 +7,16 @@
 
     <fragment
         android:id="@+id/accountFragment"
-        android:name="com.example.repositoryintern.ui.AccountFragment"
-        android:label="account_fragment"
-        tools:layout="@layout/account_fragment" />
+        android:name="com.example.repositoryintern.ui.account.AccountFragment"
+        android:label="@string/account_fragment_id"
+        tools:layout="@layout/account_fragment">
+        <action
+            android:id="@+id/action_accountFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.repositoryintern.ui.people.PeopleFragment"
+        android:label="@string/title_people"
+        tools:layout="@layout/people_fragment" />
 </navigation>
