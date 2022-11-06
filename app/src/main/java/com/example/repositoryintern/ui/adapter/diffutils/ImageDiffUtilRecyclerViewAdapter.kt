@@ -52,4 +52,16 @@ class ImageDiffUtilRecyclerViewAdapter : DiffUtil.ItemCallback<RecyclerViewItem>
             }
         }
     }
+
+    override fun getChangePayload(oldItem: RecyclerViewItem, newItem: RecyclerViewItem): Any? {
+        return when(oldItem){
+            is RecyclerViewItem.ImageChronicles -> when(newItem){
+                is RecyclerViewItem.ImageChronicles -> oldItem.image == newItem.image
+                else -> false
+            }
+            is RecyclerViewItem.ImageMoment -> TODO()
+            is RecyclerViewItem.ImageProfile -> TODO()
+            is RecyclerViewItem.People -> TODO()
+        }
+    }
 }

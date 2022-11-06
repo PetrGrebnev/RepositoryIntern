@@ -3,11 +3,19 @@ package com.example.repositoryintern.model
 import com.example.repositoryintern.data.PeopleSubscriber
 import com.example.repositoryintern.data.RecyclerViewItem
 import com.github.javafaker.Faker
+import dagger.hilt.components.SingletonComponent
+import it.czerwinski.android.hilt.annotations.BoundTo
 import javax.inject.Inject
 
-class Repository @Inject constructor() {
+interface PeopleRepository{
 
-    fun createListPeople(): MutableList<RecyclerViewItem.People> {
+    suspend fun createListPeople(): MutableList<RecyclerViewItem.People>
+}
+
+@BoundTo(supertype = PeopleRepository::class, component = SingletonComponent::class)
+class PeopleRepositoryImpl @Inject constructor(): PeopleRepository {
+
+    override suspend fun createListPeople(): MutableList<RecyclerViewItem.People> {
         val faker = Faker()
         val list = mutableListOf<RecyclerViewItem.People>()
         for (i in 0..40) {
